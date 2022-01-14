@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      search: Ionic Table using Ionic grid component
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col>No.</ion-col>
+      <ion-col>Text</ion-col>
+      <ion-col>Title</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let note of notes ; index as i" (click)="openNote(note)">
+      <ion-col>{{ i + 1 }}</ion-col>
+      <ion-col>{{ note.text }}</ion-col>
+      <ion-col>{{ note.title }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
