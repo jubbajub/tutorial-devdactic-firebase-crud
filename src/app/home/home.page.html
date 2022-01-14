@@ -13,8 +13,9 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item.name}}
+    </li>
+  </ul>
 </ion-content>
