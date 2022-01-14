@@ -25,3 +25,16 @@
   </ion-fab>
   
 </ion-content>
+
+<ion-content [fullscreen]="true">
+<ion-searchbar placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let data of notes | filter:filterTerm">
+
+      <ion-label> {{ data.title }}      </ion-label>
+      <ion-label> {{ data.text }}      </ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

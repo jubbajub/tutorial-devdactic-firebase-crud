@@ -9,6 +9,7 @@ import { ModalPage } from '../modal/modal.page';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
+  filterTerm: string;
   notes: Note[] = [];
  
   constructor(private dataService: DataService,  private cd: ChangeDetectorRef, private alertCtrl: AlertController, private modalCtrl: ModalController) {
